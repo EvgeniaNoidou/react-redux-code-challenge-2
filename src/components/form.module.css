@@ -1,0 +1,48 @@
+.Container {
+  border: 2px solid grey;
+  border-radius: 25px;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.Title {
+  border-bottom: 2px solid grey;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.Form {
+  display: grid;
+  width: 95%;
+  padding-left: 5px;
+}
+
+.Form input,
+.Form select {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.Form button {
+  width: 40%;
+}
+
+/* <div style={{ border: '2px solid grey', flexDirection: 'column', borderRadius: '25px' }}>
+<h2>Create New Company</h2>
+<form style={{
+    margin: 'auto', padding: '10px'
+}}
+    onSubmit={event => onSubmitHandler(event)}
+>
+    <p> Name</p>
+    <input type="text" defaultValue={name} onChange={event => setName(event.target.value)}></input>
+    <p>Address</p>
+    <input type="text" defaultValue={address} onChange={event => setAddress(event.target.value)} ></input>
+    <p>Revenue</p>
+    <input type="text"></input>
+    <p>Phone</p>
+    <input type="number"></input>
+    <button style={{ display: 'block' }}>Save</button>
+</form>
+</div > */

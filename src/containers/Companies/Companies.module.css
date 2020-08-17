@@ -1,0 +1,13 @@
+.Link {
+  background-color: grey;
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  color: #0e34a0;
+}
+
+.Link:hover,
+.Link:active {
+  color: #0e34a0;
+}

@@ -12,7 +12,7 @@ class App extends Component {
         <React.Fragment>
           <div className="app__header">
             <div className="app__header-title">
-              LMNOP LLC.
+              Companies Management System
             </div>
             <div className="app__nav-wrapper">
               <div className="app__header-nav">

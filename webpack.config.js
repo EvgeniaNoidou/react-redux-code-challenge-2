@@ -45,7 +45,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              // importLoaders: 1,
+              // modules: true
             }
           },
           {
@@ -54,7 +56,22 @@ module.exports = {
               sourceMap: true
             }
           }
-        ]
+        ],
+        exclude: /\.module\.css$/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ],
+        include: /\.module\.css$/
       }
     ]
   },
