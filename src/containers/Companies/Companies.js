@@ -4,7 +4,7 @@ import NewPerson from '../../components/NewPerson/NewPerson';
 import { connect } from 'react-redux';
 import * as actions from '../../store/features/companies/actions';
 import { NavLink } from 'react-router-dom';
-import classes from './Companies.module.css';
+import classes from '../../Companies.module.css';
 
 const companies = props => {
 
@@ -22,7 +22,7 @@ const companies = props => {
                 <p>{company.revenue}</p>
                 <label style={{ display: 'block' }}><strong>Phone:</strong></label>
                 <p>{company.phoneNumber}</p>
-                <NavLink className={classes.Link} to="/details">Company Overview</NavLink>
+                <NavLink className={classes.Link} to={`/details/${company.name}`}>Company Overview</NavLink>
             </section >
         )
     });
@@ -35,7 +35,7 @@ const companies = props => {
             </div>
             <div style={{ gridColumnStart: "2", width: '180px' }}>
                 <NewCompany onAddCompany={props.onAddCompany} />
-                <NewPerson />
+                <NewPerson companies={props.storedCompanies} />
             </div>
         </div>
     );

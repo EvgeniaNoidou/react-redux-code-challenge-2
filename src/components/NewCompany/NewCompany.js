@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import classes from '../../components/form.module.css';
 
 const NewCompany = (props) => {
@@ -9,6 +9,7 @@ const NewCompany = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
+
         const newCompany = {
             name: name,
             address: address,
